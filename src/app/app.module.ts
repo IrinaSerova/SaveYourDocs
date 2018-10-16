@@ -12,6 +12,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DocsUploadProvider } from '../providers/docs-upload/docs-upload';
 
+import { IonicStorageModule } from '@ionic/storage';
+import { Camera } from '@ionic-native/camera';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -22,7 +25,8 @@ import { DocsUploadProvider } from '../providers/docs-upload/docs-upload';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,6 +39,7 @@ import { DocsUploadProvider } from '../providers/docs-upload/docs-upload';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DocsUploadProvider
   ]
