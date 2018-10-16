@@ -10,10 +10,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { DocsUploadProvider } from '../providers/docs-upload/docs-upload';
+
 
 import { IonicStorageModule } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera';
+import { DocsProvider } from '../providers/docs/docs';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { Camera } from '@ionic-native/camera';
     SplashScreen,
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DocsUploadProvider
+    DocsProvider
   ]
 })
 export class AppModule {}
