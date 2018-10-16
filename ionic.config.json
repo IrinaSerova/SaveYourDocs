@@ -1,0 +1,7 @@
+{
+  "name": "SaveYourDocs",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
